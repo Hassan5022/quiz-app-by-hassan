@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App By Hassan</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+</head>
+<body onload="renderQuestion(0), startTime()" class="gr2">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-6">
+                  <div class="card mx-auto" style="max-width: 80%;">
+                    <h5 class="card-header bg-theme text-white">WELCOME, <script>document.write(sessionStorage.getItem("name").toUpperCase());</script> <span id="timer" class="float-right">02:00</span></h5>
+                    <div class="card-body">
+                        <h5 class="card-title mb-4" id="divQuestion">Q1. The correct answer of the equation, 2 + 2 is</h5>
+                        <p class="card-text divOption" onclick="putActiveClass(0)">a) option1</p>
+                        <p class="card-text divOption" onclick="putActiveClass(1)">b) option2</p>
+                        <p class="card-text divOption" onclick="putActiveClass(2)">c) option3</p>
+                        <p class="card-text divOption" onclick="putActiveClass(3)">d) option4</p>
+                      </div>
+                      <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-theme float-right text-white" id="btn-next" onclick="showNextQuestion()">Next Question</a>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
